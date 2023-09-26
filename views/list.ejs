@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+    <div class="box">
+        <h2>
+            <%= kindofday %>
+        </h2>
+        <br><br>
+
+
+        <% for(i=0;i<newlistitems.length;i++){ %>
+            <input class="strike" type="checkbox">
+
+
+            <span>   <%= newlistitems[i]%> </span>
+
+            <br>
+            <br>
+            <% } %>
+
+
+                <form action="/" method="post">
+
+                    <input type="text" class="inp" name="newitem" id="item" autocomplete="off" placeholder="additem">
+                    <button class="inp" name="submit">ADD</button>
+                </form>
+
+    </div>
+    <%- include("partials/footer.ejs") %>
